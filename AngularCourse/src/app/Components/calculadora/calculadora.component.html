@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>{{title}}</h1>
+
+    <form action="">
+
+      Numero 1: <input type="number" [(ngModel)]="numero1" name="numero1"> <br>
+
+      Numero 2: <input type="number" [(ngModel)]="numero2" name="numero2"> <br>
+
+      <input type="submit" class="form-group" (click)="sumar()" value="Sumar">
+      <input type="submit" (click)="restar()" class="btn btn-primary" value="Restar">
+
+      Resultado: <h2>{{resultado}}</h2>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<h1>{{titulo}}</h1>
+
+<h1>Edad del empleado: {{year < 2020 ? "Menos de 2020": "Mayor de 2020"}}</h1>
+
+<h1>El nombre de la empresa es: {{empresa}}</h1>
+
+<!-- Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled] = "habilitacionCuadro"> -->
+
+<!-- Binding bidireccional -->
+
+Introduce la empresa <input type="text" [(ngModel)]="empresa">
+
+<br>
+<br>
+{{textoDeRegistro}}<br>
+Registrado: <input type="radio" value="si" name="nRegistro" id="registro" [checked] = "usuRegistrado" (click)="setUsuarioRegistrado($event)"/>
+No Registrado <input type="radio" value="no" name="nRegistro"  (click)="setUsuarioRegistrado($event)" />
+
+<!-- <input type="button" value="Dale" (click)="llamaEmpresa(empresa.value)" />
+ -->
+
+{{getRegistroUsuario()}}
